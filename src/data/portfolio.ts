@@ -239,25 +239,12 @@ export const portfolioData: PortfolioData = {
           },
         ],
       },
-      {
-        id: "airflow",
-        name: "Airflow",
-        description:
-          "Exploring workflow orchestration, scheduling, and automated data workflows.",
-        skills: [
-          {
-            name: "Airflow",
-            category: "airflow",
-            focus: "Workflow orchestration & scheduling",
-          },
-        ],
-      },
     ],
   },
 
   projects: {
     badge: "FEATURED WORK",
-    title: "Projects & engineering experiments",
+    title: "Projects & Engineering Work",
     subtitle:
       "Engineering work focused on reliable backend systems, database engineering, and test automation.",
     items: [
