@@ -24,7 +24,7 @@ export const portfolioData: PortfolioData = {
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
     { label: "Capabilities", href: "#capabilities" },
-    { label: "Skills", href: "#skills" },
+    { label: "Exploring", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
     { label: "Terminal", href: "#terminal" },
@@ -52,30 +52,30 @@ export const portfolioData: PortfolioData = {
     techStackVisual: {
       badge: "SYSTEM ARCHITECTURE & CAPABILITIES",
       title: "Core Engineering Stack",
-      subtitle: "Pragmatic technologies chosen for reliability, developer ergonomics, and speed.",
+      subtitle: "Practical technologies focused on backend development, automation, reliability, and efficient delivery.",
       environment: "production / linux-x86_64",
       architectureLayers: [
         {
-          layer: "01. Presentation & UI",
-          techs: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+          layer: "01. Application & APIs",
+          techs: ["Python", "FastAPI", "Node.js", "REST APIs", "TypeScript"],
           status: "healthy",
           latency: "sub-50ms",
         },
         {
-          layer: "02. Services & APIs",
-          techs: ["Node.js", "REST APIs", "Express / Fastify", "Type-safe Contracts"],
+          layer: "02. Data & Persistence",
+          techs: ["PostgreSQL", "MongoDB", "Redis", "Alembic", "SQL"],
           status: "healthy",
           latency: "< 25ms",
         },
         {
-          layer: "03. Persistence & State",
-          techs: ["PostgreSQL", "Relational Schemas", "Query Optimization"],
+          layer: "03. Automation & Workflows",
+          techs: ["Airflow", "Playwright", "Bash / Shell", "CI/CD", "Test Automation"],
           status: "operational",
-          latency: "pooled",
+          latency: "pipelines",
         },
         {
           layer: "04. DevOps & Runtime",
-          techs: ["Docker", "Kubernetes", "Linux", "Git", "CI/CD Pipelines"],
+          techs: ["Docker", "Linux", "Git", "Bitbucket", "CI/CD"],
           status: "automated",
           latency: "gitops",
         },
@@ -84,17 +84,17 @@ export const portfolioData: PortfolioData = {
         {
           label: "Structured",
           value: "Simplicity",
-          subtext: "over premature complexity",
+          subtext: "over unnecessary complexity",
         },
         {
           label: "Delivery",
-          value: "CI/CD",
-          subtext: "automated tests & build",
+          value: "Automation",
+          subtext: "through testing, builds & deployment",
         },
         {
           label: "Focus",
-          value: "Real Products",
-          subtext: "tested & maintained",
+          value: "Reliable Software",
+          subtext: "that is practical & maintainable",
         },
       ],
     },
@@ -196,10 +196,10 @@ export const portfolioData: PortfolioData = {
   },
 
   skills: {
-    badge: "TECHNOLOGY STACK",
-    title: "Tools & technologies I work with",
+    badge: "CURRENT FOCUS & LEARNING",
+    title: "Technologies I'm actively exploring",
     subtitle:
-      "A curated collection of languages, frameworks, and infrastructure tools I use to build software.",
+      "A snapshot of the languages, frameworks, and infrastructure tools I am currently learning and incorporating into my projects.",
     categories: [
       {
         id: "languages",
@@ -207,7 +207,6 @@ export const portfolioData: PortfolioData = {
         description: "Core languages for building type-safe applications and automation.",
         skills: [
           { name: "JavaScript", category: "languages", focus: "ESNext / Modern Web" },
-          { name: "TypeScript", category: "languages", focus: "Strict Typing & Interfaces" },
         ],
       },
       {
@@ -217,6 +216,7 @@ export const portfolioData: PortfolioData = {
         skills: [
           { name: "React", category: "frontend", focus: "Component Architecture & Hooks" },
           { name: "Next.js", category: "frontend", focus: "App Router & SSR / SSG" },
+          { name: "Tailwind CSS", category: "frontend", focus: "Utility-first Styling" },
         ],
       },
       {
@@ -225,16 +225,13 @@ export const portfolioData: PortfolioData = {
         description: "Server runtimes, HTTP services, and API contract design.",
         skills: [
           { name: "Node.js", category: "backend", focus: "Event Loop & Server Logic" },
-          { name: "REST APIs", category: "backend", focus: "Stateless Resource Design" },
         ],
       },
       {
         id: "database",
         name: "Database",
         description: "Relational persistence, query modeling, and transactional integrity.",
-        skills: [
-          { name: "PostgreSQL", category: "database", focus: "Relational Design & Indexing" },
-        ],
+        skills: [],
       },
       {
         id: "devops",
@@ -242,9 +239,6 @@ export const portfolioData: PortfolioData = {
         description: "Containerization, system environments, version control, and automation.",
         skills: [
           { name: "Docker", category: "devops", focus: "Multi-stage Builds & Isolation" },
-          { name: "Linux", category: "devops", focus: "Shell, System Administration & Processes" },
-          { name: "Git", category: "devops", focus: "Branching, Rebasing & Versioning" },
-          { name: "CI/CD", category: "devops", focus: "Automated Build & Test Workflows" },
           { name: "Kubernetes", category: "devops", focus: "Pods, Deployments & Services" },
         ],
       },
@@ -258,114 +252,49 @@ export const portfolioData: PortfolioData = {
       "A selection of software projects solving real technical problems. Structured for easily replacing with live links.",
     items: [
       {
-        id: "tracepulse-engine",
-        title: "TracePulse Engine",
-        slug: "tracepulse-engine",
-        tagline: "Distributed event ingestion pipeline & real-time webhook delivery orchestrator",
+        id: "truewill",
+        title: "Truewill",
+        slug: "truewill",
+        tagline: "Quality Management Platform",
         description:
-          "A resilient webhook and background task management engine built to guarantee message delivery across distributed microservices. Features automated exponential backoff retries, signature verification, and a live dead-letter inspection console.",
+          "A production quality-management platform developed for an Australian client, spanning staff, client, scheduling, shift, pricing, and incident-management workflows.",
         problemSolved:
-          "Services frequently lost critical events during downstream network blips and API rate-limiting spikes without any observability or idempotency guarantees.",
+          "Automated a large portion of the Staff and Incident Management modules before a major application change required the automation suite to be reworked.",
         architectureHighlights: [
-          "Worker concurrency pools designed in Node.js with graceful SIGTERM drain",
-          "Relational event ledger in PostgreSQL with transactional lease locking",
-          "Containerized deploy via Docker with zero-downtime rolling updates",
+          "BACKEND: Python · FastAPI · REST APIs",
+          "DATA: PostgreSQL · Alembic",
+          "AUTOMATION: Playwright · Test Framework",
+          "INFRASTRUCTURE: Docker · Linux · Bitbucket CI/CD",
         ],
-        technologies: ["TypeScript", "Node.js", "PostgreSQL", "Docker", "REST APIs"],
-        githubUrl: "https://github.com/placeholder-ayush/tracepulse-engine",
-        liveDemoUrl: "https://tracepulse-demo.placeholder.dev",
+        technologies: ["Python", "FastAPI", "PostgreSQL", "Playwright", "Docker"],
+        githubUrl: "",
+        liveDemoUrl: "",
         status: "Production",
         isFeatured: true,
         keyContributions: [
-          "Implemented idempotency key hashing to prevent double-billing and duplicate webhook deliveries",
-          "Reduced background dispatch latency from 450ms to 48ms under high concurrent load",
-          "Authored complete Docker Compose sandbox for 1-command local development",
+          "Backend: Built and maintained REST APIs with Python/FastAPI, handling authentication, authorization, business logic, integrations, file handling, notifications, error handling, and logging.",
+          "Database: Worked extensively with PostgreSQL, including schema design, relationships, indexing, query optimization, concurrent operations, data cleanup, and Alembic migrations.",
+          "Testing: Built the Playwright automation framework from scratch, with reusable page objects, step definitions, feature files, utilities, factories, types, caching, and configurable test-data generation.",
+          "DevOps: Maintained Docker and Linux environments and worked with PM2, Bitbucket Pipelines, and shell-based deployment workflows across development and staging environments.",
         ],
         mockup: {
-          type: "system",
-          tag: "FLAGSHIP ARCHITECTURE",
-          title: "TracePulse Distributed Pipeline",
-          snippet: `POST /api/v1/events/dispatch
-HTTP/1.1 202 Accepted
-X-Trace-Id: tp_9f82a170e
-Idempotency-Key: ik_8824df9
-
-[Queue: active] -> [WorkerPool: 8 workers]
--> [DeliveryTarget: 200 OK in 38ms]`,
-        },
-      },
-      {
-        id: "kubewatchman-cli",
-        title: "KubeWatchman CLI",
-        slug: "kubewatchman-cli",
-        tagline: "Interactive terminal utility for rapid container health diagnostics and logs",
-        description:
-          "A lightweight developer CLI tool designed to inspect unhealthy Docker containers and Kubernetes pod crash loops with contextual root-cause extraction.",
-        problemSolved:
-          "Developers spent too much time grepping through multi-megabyte log dumps and running verbose kubectl commands just to diagnose simple configuration issues.",
-        technologies: ["TypeScript", "Docker", "Kubernetes", "Linux", "Node.js"],
-        githubUrl: "https://github.com/placeholder-ayush/kubewatchman-cli",
-        liveDemoUrl: "https://github.com/placeholder-ayush/kubewatchman-cli#quickstart",
-        status: "Active Development",
-        isFeatured: false,
-        mockup: {
           type: "terminal",
-          tag: "DEV TOOLING",
-          title: "kubewatchman inspect",
-          snippet: `$ kubewatchman inspect --namespace staging
-✓ 12/14 pods operational
-! pod/auth-svc-849f: OOMKilled detected
-↳ Recommendation: Increase memory limit to 512Mi`,
-        },
-      },
-      {
-        id: "flowforge-studio",
-        title: "FlowForge Studio",
-        slug: "flowforge-studio",
-        tagline: "Modular web automation workbench for scheduling APIs and data transformations",
-        description:
-          "A clean, full-stack workflow workbench allowing developers to chain REST requests, schedule cron-based data extractions, and inspect live payload transformations.",
-        problemSolved:
-          "Replaced fragile, unversioned one-off cron scripts with a centralized, observable dashboard and scheduled task executor.",
-        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-        githubUrl: "https://github.com/placeholder-ayush/flowforge-studio",
-        liveDemoUrl: "https://flowforge.placeholder.dev",
-        status: "Completed",
-        isFeatured: false,
-        mockup: {
-          type: "dashboard",
-          tag: "WEB APP",
-          title: "FlowForge Pipeline Canvas",
-          snippet: `[Webhook Trigger]
-  └─> [Transform JSON Schema]
-        └─> [POST /sync/crm] (200 OK)
-        └─> [PostgreSQL Upsert] (14 rows)`,
-        },
-      },
-      {
-        id: "docusync-api",
-        title: "DocuSync API",
-        slug: "docusync-api",
-        tagline: "Developer documentation indexing microservice with sub-15ms search response",
-        description:
-          "A high-performance REST API designed to index markdown documentation and code repositories for fast, localized search and versioned documentation delivery.",
-        problemSolved:
-          "Static site generators suffered from slow full-text client searches as documentation grew over thousands of pages.",
-        technologies: ["Node.js", "TypeScript", "REST APIs", "PostgreSQL", "Docker"],
-        githubUrl: "https://github.com/placeholder-ayush/docusync-api",
-        liveDemoUrl: "https://docusync.placeholder.dev",
-        status: "Prototype",
-        isFeatured: false,
-        mockup: {
-          type: "api",
-          tag: "REST API",
-          title: "DocuSync Search Endpoint",
-          snippet: `GET /v1/search?q=docker+compose+healthcheck
-{
-  "matches": 4,
-  "execution_time_ms": 9.4,
-  "results": [{ "doc": "containers/spec.md", "score": 0.98 }]
-}`,
+          tag: "FEATURED PROJECT",
+          title: "truewill / development",
+          snippet: `TRUEWILL / DEVELOPMENT
+
+$ pytest
+✓ staff workflows
+✓ incident workflows
+✓ authentication
+✓ business rules
+
+$ deploy.sh
+→ backup current build
+→ install dependencies
+→ build application
+→ reload PM2
+✓ deployment complete`,
         },
       },
     ],
@@ -375,68 +304,37 @@ Idempotency-Key: ik_8824df9
     badge: "CAREER TIMELINE",
     title: "Experience & contributions",
     subtitle:
-      "A chronological summary of engineering roles, responsibilities, and technical impact. Configured with placeholders for your actual history.",
+      "A chronological look at my engineering work, responsibilities, and the systems I've contributed to.",
     items: [
       {
         id: "exp-1",
-        role: "Software Developer [Placeholder]",
-        company: "Tech Systems & Systems Lab [Placeholder]",
-        companyUrl: "https://example.com/company-placeholder",
-        location: "Bengaluru, India / Remote [Placeholder]",
-        period: "2024 — Present",
+        role: "Backend Developer → Automation & DevOps",
+        company: "Jittec IT Solutions",
+        companyUrl: "",
+        location: "Thiruvananthapuram, India",
+        period: "June 2025 — Present",
         isCurrent: true,
         description:
-          "Lead engineer for core full-stack features and internal automation tools. Focused on improving platform reliability, streamlining API communication, and modernizing frontend user experiences.",
+          "Worked on Truewill, a quality-management platform for an Australian client, initially focusing on backend development and database engineering before moving into test automation and supporting DevOps tasks across development and staging environments.",
         keyContributions: [
-          "Architected type-safe REST APIs and microservice endpoints with Node.js and PostgreSQL",
-          "Engineered CI/CD build automation pipelines reducing manual deployment steps by 70%",
-          "Collaborated with cross-functional teams to build high-performance Next.js application interfaces",
-          "Mentored junior developers on Git workflows, Docker containerization, and clean code principles",
+          "Developed and maintained REST APIs using Python and FastAPI, covering authentication, authorization, business logic, third-party integrations, file handling, notifications, error handling, and logging.",
+          "Worked extensively with PostgreSQL, including schema design, relationships, indexing, query optimization, concurrent operations, data cleanup, and Alembic migrations.",
+          "Built a Playwright automation framework from scratch, including reusable page objects, step definitions, feature files, utilities, factories, types, caching, and configurable test-data generation.",
+          "Automated a large portion of the Staff and Incident Management workflows before a major application change required the automation suite to be reworked.",
+          "Supported development and staging environments using Linux, Docker, PM2, Bitbucket Pipelines, and shell-based deployment workflows.",
         ],
         technologies: [
-          "TypeScript",
-          "Next.js",
-          "Node.js",
+          "Python",
+          "FastAPI",
           "PostgreSQL",
+          "Alembic",
+          "Playwright",
           "Docker",
+          "Linux",
           "Git",
+          "Bitbucket",
           "CI/CD",
         ],
-      },
-      {
-        id: "exp-2",
-        role: "Junior Software Engineer [Placeholder]",
-        company: "Digital Product Studio [Placeholder]",
-        companyUrl: "https://example.com/studio-placeholder",
-        location: "Hybrid [Placeholder]",
-        period: "2023 — 2024",
-        isCurrent: false,
-        description:
-          "Developed client-facing web applications, responsive user interfaces, and automated data synchronization jobs.",
-        keyContributions: [
-          "Built responsive UI components using React, Next.js, and modern CSS standards",
-          "Integrated third-party APIs and implemented robust client-side validation logic",
-          "Maintained relational database migrations and structured query optimization in PostgreSQL",
-          "Participated in agile sprints, technical code reviews, and test coverage improvements",
-        ],
-        technologies: ["JavaScript", "React", "TypeScript", "REST APIs", "Git", "Linux"],
-      },
-      {
-        id: "exp-3",
-        role: "Open Source Contributor & Projects [Placeholder]",
-        company: "Self-Directed & Community [Placeholder]",
-        companyUrl: "https://github.com",
-        location: "Remote",
-        period: "2022 — 2023",
-        isCurrent: false,
-        description:
-          "Built standalone developer utilities, published CLI tools, and contributed to open-source developer documentation and developer tooling.",
-        keyContributions: [
-          "Authored modular shell scripts and Node.js automation utilities for local development environments",
-          "Explored containerization patterns with Docker and local Kubernetes test clusters",
-          "Published open-source starter templates focused on TypeScript and modern web best practices",
-        ],
-        technologies: ["TypeScript", "Node.js", "Docker", "Linux", "Git"],
       },
     ],
   },
@@ -446,53 +344,60 @@ Idempotency-Key: ik_8824df9
     title: "Developer sandbox",
     subtitle:
       "A lightweight secondary terminal interface. Run commands to explore my focus, stack, and availability.",
-    initialCommands: ["whoami", "current_focus", "status"],
+    initialCommands: ["whoami", "focus", "status"],
     commands: {
       whoami: {
         command: "whoami",
-        description: "Display identity and core summary",
+        description: "Display profile",
         output: [
-          "Ayush — Software Developer",
-          "Focused on building reliable web applications, automation, and backend systems.",
+          "Ayush — Backend Developer",
+          "Focused on backend systems, test automation, and practical DevOps.",
           "Based in India • Working globally.",
         ],
       },
-      current_focus: {
-        command: "current_focus",
-        description: "Show current technical learning and building initiatives",
+      focus: {
+        command: "focus",
+        description: "Show current engineering focus",
         output: [
-          "1. Distributed systems and webhook delivery reliability (Node.js & PostgreSQL)",
-          "2. Modern App Router architecture with Next.js & React Server Components",
-          "3. Container orchestration with Docker and Kubernetes workflows",
+          "1. Backend development with Python, FastAPI, REST APIs & PostgreSQL",
+          "2. Test automation with Playwright and reusable automation tooling",
+          "3. Deployment workflows, Linux environments, Docker & CI/CD",
+          "4. Currently expanding into broader DevOps practices and learning Kubernetes",
+        ],
+      },
+      stack: {
+        command: "stack",
+        description: "Show technology stack",
+        output: [
+          "Backend:",
+          "  Python • FastAPI • Node.js • REST APIs",
+          "",
+          "Data:",
+          "  PostgreSQL • MongoDB • Redis • Alembic",
+          "",
+          "Automation:",
+          "  Playwright • Bash / Shell • Airflow • CI/CD",
+          "",
+          "Infrastructure:",
+          "  Docker • Linux • Git • Bitbucket",
         ],
       },
       status: {
         command: "status",
-        description: "Check availability status",
+        description: "Show current availability",
         output: [
-          "● Status: Available for full-time opportunities and engineering collaborations",
-          "● Response time: Within 24 hours",
-          "● Preferred communication: Email or LinkedIn",
-        ],
-      },
-      skills: {
-        command: "skills",
-        description: "List primary technical stack",
-        output: [
-          "Languages: JavaScript, TypeScript",
-          "Frontend: React, Next.js, Tailwind CSS",
-          "Backend: Node.js, REST APIs",
-          "Database: PostgreSQL",
-          "DevOps: Docker, Linux, Git, CI/CD, Kubernetes",
+          "● Status: Open to new engineering opportunities",
+          "● Focus: Backend • Automation • DevOps",
+          "● Environment: Development & Staging",
         ],
       },
       contact: {
         command: "contact",
-        description: "Output reach-out options",
+        description: "Show contact information",
         output: [
-          "Email: ayush.developer.contact@example.com [Placeholder]",
-          "GitHub: github.com/placeholder-ayush",
-          "LinkedIn: linkedin.com/in/placeholder-ayush",
+          "● Email: ayush.developer.contact@example.com",
+          "● LinkedIn: linkedin.com/in/placeholder-ayush",
+          "● GitHub: github.com/placeholder-ayush",
         ],
       },
       help: {
@@ -500,12 +405,13 @@ Idempotency-Key: ik_8824df9
         description: "List all supported terminal commands",
         output: [
           "Available commands:",
-          "  whoami         - Print developer profile",
-          "  current_focus  - What I am currently building & learning",
-          "  status         - Current work & collaboration availability",
-          "  skills         - Quick overview of technologies",
-          "  contact        - Direct contact information",
-          "  clear          - Clear the terminal screen",
+          "",
+          "  whoami       Display profile",
+          "  focus        Show current engineering focus",
+          "  stack        Show technology stack",
+          "  status       Show current availability",
+          "  contact      Show contact information",
+          "  clear        Clear terminal",
         ],
       },
     },
