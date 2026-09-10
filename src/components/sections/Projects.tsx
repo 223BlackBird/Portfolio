@@ -32,9 +32,6 @@ export function Projects() {
                     <Badge variant="accent" size="sm">
                       FEATURED FLAGSHIP
                     </Badge>
-                    <Badge variant="outline" size="sm">
-                      {featuredProject.status}
-                    </Badge>
                   </div>
 
                   <div>
@@ -147,7 +144,7 @@ export function Projects() {
                   {featuredProject.architectureHighlights && (
                     <div className="space-y-2 pt-2">
                       <div className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">
-                        Architecture Design:
+                        Engineering Areas:
                       </div>
                       <div className="space-y-2">
                         {featuredProject.architectureHighlights.map((arch, i) => (
@@ -164,8 +161,8 @@ export function Projects() {
                 </div>
 
                 <div className="pt-4 mt-6 border-t border-white/[0.04] text-[11px] font-mono text-zinc-500 flex items-center justify-between">
-                  <span>Status: Ready for deployment</span>
-                  <span className="text-emerald-400">99.9% reliability</span>
+                  <span>Status: Active production project</span>
+                  <span className="text-emerald-400">●</span>
                 </div>
               </div>
             </div>
