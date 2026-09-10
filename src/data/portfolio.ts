@@ -2,21 +2,23 @@ import { PortfolioData } from "@/types/portfolio";
 
 export const portfolioData: PortfolioData = {
   metadata: {
-    title: "Ayush | Software Developer",
+    title: "Ayush | Backend-focused Software Engineer",
     description:
-      "Software developer focused on building reliable systems, practical web applications, and developer automation.",
+      "Backend-focused software engineer with strong automation and growing DevOps experience.",
     siteUrl: "https://ayush-portfolio.vercel.app",
     author: "Ayush",
     keywords: [
-      "Software Developer",
-      "Full Stack Engineer",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
+      "Backend Developer",
+      "Software Engineer",
+      "FastAPI",
+      "Python",
       "PostgreSQL",
+      "Playwright",
+      "Test Automation",
       "Docker",
       "DevOps",
-      "Web Development",
+      "Linux",
+      "CI/CD",
     ],
   },
 
@@ -34,9 +36,9 @@ export const portfolioData: PortfolioData = {
   hero: {
     greeting: "Hi, I'm",
     name: "Ayush",
-    role: "Software Developer",
+    role: "Backend-focused Software Engineer",
     tagline:
-      "I build reliable software, automate repetitive work, and enjoy turning ideas into things people can actually use.",
+      "Backend-focused software engineer with strong automation and growing DevOps experience.",
     statusBadge: {
       available: true,
       text: "Available for projects & roles",
@@ -52,32 +54,29 @@ export const portfolioData: PortfolioData = {
     techStackVisual: {
       badge: "SYSTEM ARCHITECTURE & CAPABILITIES",
       title: "Core Engineering Stack",
-      subtitle: "Practical technologies focused on backend development, automation, reliability, and efficient delivery.",
+      subtitle:
+        "Practical technologies focused on backend development, automation, reliability, and efficient delivery.",
       environment: "production / linux-x86_64",
       architectureLayers: [
         {
           layer: "01. Application & APIs",
           techs: ["Python", "FastAPI", "Node.js", "REST APIs", "TypeScript"],
           status: "healthy",
-          latency: "sub-50ms",
         },
         {
           layer: "02. Data & Persistence",
           techs: ["PostgreSQL", "MongoDB", "Redis", "Alembic", "SQL"],
           status: "healthy",
-          latency: "< 25ms",
         },
         {
           layer: "03. Automation & Workflows",
           techs: ["Airflow", "Playwright", "Bash / Shell", "CI/CD", "Test Automation"],
           status: "operational",
-          latency: "pipelines",
         },
         {
           layer: "04. DevOps & Runtime",
           techs: ["Docker", "Linux", "Git", "Bitbucket", "CI/CD"],
           status: "automated",
-          latency: "gitops",
         },
       ],
       metrics: [
@@ -105,8 +104,8 @@ export const portfolioData: PortfolioData = {
     subtitle:
       "I treat software development not just as writing code, but as building dependable tools that solve real problems.",
     paragraphs: [
-      "Focused on building robust systems, clean code, and reliable software from development to production. I work across frontend, backend, and automation, with a constant focus on better developer experience, software that just works, and services that don't wake people up in the middle of the night.",
-      "When I am not developing user-facing products, I explore Linux internals, container orchestration with Docker and Kubernetes, and automated deployment pipelines. Continuous learning is non-negotiable — every project is an opportunity to improve architecture, performance, and code maintainability.",
+      "Focused on building robust systems, clean code, and reliable software from development to production. I work across backend development, test automation, and infrastructure, with a constant focus on better developer experience, software that just works, and services that don’t wake people up in the middle of the night.",
+      "When I'm not working on backend systems and automation, I explore Linux, Docker, deployment workflows, and broader DevOps practices while continuing to learn Kubernetes.",
     ],
     principles: [
       {
@@ -131,8 +130,8 @@ export const portfolioData: PortfolioData = {
       },
     ],
     highlights: [
-      { label: "Core Focus", value: "Backend & DevOps" },
-      { label: "Development", value: "Language Agnostic" },
+      { label: "Core Focus", value: "Backend & Automation" },
+      { label: "Development", value: "Python & APIs" },
       { label: "Infrastructure", value: "Docker, Linux & CI/CD" },
       { label: "Approach", value: "Pragmatic & Tested" },
     ],
@@ -188,58 +187,61 @@ export const portfolioData: PortfolioData = {
         id: "deployment",
         title: "Deployment & Infrastructure",
         description:
-          "Working with Linux, Docker, and CI/CD workflows, while actively building experience with Kubernetes and broader DevOps practices.",
+          "Working with Linux, Docker, and CI/CD pipelines to support reliable build, test, and deployment workflows across environments.",
         iconName: "Cloud",
-        tags: ["Linux", "Docker", "CI/CD", "Kubernetes"],
+        tags: ["Linux", "Docker", "CI/CD", "Bitbucket"],
       },
     ],
   },
 
   skills: {
-    badge: "CURRENT FOCUS & LEARNING",
+    badge: "EXPLORING",
     title: "Technologies I'm actively exploring",
     subtitle:
-      "A snapshot of the languages, frameworks, and infrastructure tools I am currently learning and incorporating into my projects.",
+      "A snapshot of tools, systems, and practices I am currently learning and experimenting with outside my established stack.",
     categories: [
       {
-        id: "languages",
-        name: "Languages",
-        description: "Core languages for building type-safe applications and automation.",
+        id: "orchestration",
+        name: "Container Orchestration",
+        description:
+          "Actively learning cluster architecture, container orchestration, and cloud-native workflows.",
         skills: [
-          { name: "JavaScript", category: "languages", focus: "ESNext / Modern Web" },
+          {
+            name: "Kubernetes",
+            category: "orchestration",
+            focus: "Currently learning — Architecture, Pods & Services",
+          },
         ],
       },
       {
-        id: "frontend",
-        name: "Frontend",
-        description: "User interfaces, responsive layouts, and modern web application frameworks.",
+        id: "systems",
+        name: "Systems & Linux",
+        description:
+          "Exploring deeper operating system mechanics, process management, and systems programming.",
         skills: [
-          { name: "React", category: "frontend", focus: "Component Architecture & Hooks" },
-          { name: "Next.js", category: "frontend", focus: "App Router & SSR / SSG" },
-          { name: "Tailwind CSS", category: "frontend", focus: "Utility-first Styling" },
+          {
+            name: "Linux Internals",
+            category: "systems",
+            focus: "Kernel basics, processes & namespaces",
+          },
         ],
       },
       {
-        id: "backend",
-        name: "Backend",
-        description: "Server runtimes, HTTP services, and API contract design.",
+        id: "devops-workflows",
+        name: "DevOps & Workflows",
+        description:
+          "Expanding into broader deployment practices, workflow automation, and infrastructure tooling.",
         skills: [
-          { name: "Node.js", category: "backend", focus: "Event Loop & Server Logic" },
-        ],
-      },
-      {
-        id: "database",
-        name: "Database",
-        description: "Relational persistence, query modeling, and transactional integrity.",
-        skills: [],
-      },
-      {
-        id: "devops",
-        name: "DevOps / Infrastructure",
-        description: "Containerization, system environments, version control, and automation.",
-        skills: [
-          { name: "Docker", category: "devops", focus: "Multi-stage Builds & Isolation" },
-          { name: "Kubernetes", category: "devops", focus: "Pods, Deployments & Services" },
+          {
+            name: "Broader DevOps Practices",
+            category: "devops-workflows",
+            focus: "Deployment workflows & infrastructure",
+          },
+          {
+            name: "Airflow",
+            category: "devops-workflows",
+            focus: "Workflow orchestration & data pipelines",
+          },
         ],
       },
     ],
@@ -249,7 +251,7 @@ export const portfolioData: PortfolioData = {
     badge: "FEATURED WORK",
     title: "Projects & engineering experiments",
     subtitle:
-      "A selection of software projects solving real technical problems. Structured for easily replacing with live links.",
+      "Engineering work focused on reliable backend systems, database engineering, and test automation.",
     items: [
       {
         id: "truewill",
@@ -257,7 +259,7 @@ export const portfolioData: PortfolioData = {
         slug: "truewill",
         tagline: "Quality Management Platform",
         description:
-          "A production quality-management platform developed for an Australian client, spanning staff, client, scheduling, shift, pricing, and incident-management workflows.",
+          "A quality-management platform developed for an Australian client, spanning staff, client, scheduling, shift, pricing, and incident-management workflows.",
         problemSolved:
           "Automated a large portion of the Staff and Incident Management modules before a major application change required the automation suite to be reworked.",
         architectureHighlights: [
@@ -274,7 +276,7 @@ export const portfolioData: PortfolioData = {
         keyContributions: [
           "Backend: Built and maintained REST APIs with Python/FastAPI, handling authentication, authorization, business logic, integrations, file handling, notifications, error handling, and logging.",
           "Database: Worked extensively with PostgreSQL, including schema design, relationships, indexing, query optimization, concurrent operations, data cleanup, and Alembic migrations.",
-          "Testing: Built the Playwright automation framework from scratch, with reusable page objects, step definitions, feature files, utilities, factories, types, caching, and configurable test-data generation.",
+          "Testing: Built the Playwright automation framework from scratch, including reusable page objects, step definitions, feature files, utilities, factories, types, caching, and configurable test-data generation.",
           "DevOps: Maintained Docker and Linux environments and worked with PM2, Bitbucket Pipelines, and shell-based deployment workflows across development and staging environments.",
         ],
         mockup: {
@@ -370,16 +372,16 @@ $ deploy.sh
         description: "Show technology stack",
         output: [
           "Backend:",
-          "  Python • FastAPI • Node.js • REST APIs",
+          "Python • FastAPI • Node.js • REST APIs",
           "",
           "Data:",
-          "  PostgreSQL • MongoDB • Redis • Alembic",
+          "PostgreSQL • MongoDB • Redis • Alembic",
           "",
           "Automation:",
-          "  Playwright • Bash / Shell • Airflow • CI/CD",
+          "Playwright • Bash / Shell • Airflow • CI/CD",
           "",
           "Infrastructure:",
-          "  Docker • Linux • Git • Bitbucket",
+          "Docker • Linux • Git • Bitbucket",
         ],
       },
       status: {
@@ -388,16 +390,14 @@ $ deploy.sh
         output: [
           "● Status: Open to new engineering opportunities",
           "● Focus: Backend • Automation • DevOps",
-          "● Environment: Development & Staging",
         ],
       },
       contact: {
         command: "contact",
         description: "Show contact information",
         output: [
-          "● Email: ayush.developer.contact@example.com",
-          "● LinkedIn: linkedin.com/in/placeholder-ayush",
-          "● GitHub: github.com/placeholder-ayush",
+          "● Email: 223whizguru@gmail.com",
+          "● GitHub: github.com/223BlackBird",
         ],
       },
       help: {
@@ -420,26 +420,20 @@ $ deploy.sh
   contact: {
     title: "Have an idea, project, or opportunity?",
     subtitle:
-      "Let's build something interesting. I am always open to discussing reliable software, full-stack projects, and engineering challenges.",
-    directEmail: "ayush.developer.contact@example.com",
+      "Let's build something interesting. I am always open to discussing backend systems, automation, DevOps, and engineering challenges.",
+    directEmail: "223whizguru@gmail.com",
     statusText: "Usually replies within 24 hours",
     socialLinks: [
       {
         name: "GitHub",
-        url: "https://github.com/placeholder-ayush",
-        username: "@placeholder-ayush",
+        url: "https://github.com/223BlackBird",
+        username: "@223BlackBird",
         iconName: "Github",
       },
       {
-        name: "LinkedIn",
-        url: "https://linkedin.com/in/placeholder-ayush",
-        username: "in/placeholder-ayush",
-        iconName: "Linkedin",
-      },
-      {
         name: "Email",
-        url: "mailto:ayush.developer.contact@example.com",
-        username: "ayush.developer.contact@example.com",
+        url: "mailto:223whizguru@gmail.com",
+        username: "223whizguru@gmail.com",
         iconName: "Mail",
       },
     ],
@@ -448,6 +442,6 @@ $ deploy.sh
   footer: {
     copyrightName: "Ayush",
     techStackNote: "Designed with purpose. Built with Next.js, TypeScript & Tailwind CSS.",
-    statusText: "All systems nominal • Static build deployable to Vercel",
+    statusText: "Deployed with Vercel • Built with Next.js",
   },
 };
