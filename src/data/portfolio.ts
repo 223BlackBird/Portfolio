@@ -56,7 +56,7 @@ export const portfolioData: PortfolioData = {
       title: "Core Engineering Stack",
       subtitle:
         "Practical technologies focused on backend development, automation, reliability, and efficient delivery.",
-      environment: "production / linux-x86_64",
+      environment: "runtime / linux-x86_64",
       architectureLayers: [
         {
           layer: "01. Application & APIs",
@@ -119,7 +119,7 @@ export const portfolioData: PortfolioData = {
           "If a task is executed manually more than twice, it deserves a script, a pipeline, or a tool.",
       },
       {
-        title: "End-to-End Ownership",
+        title: "End-to-End Understanding",
         description:
           "Understanding how code behaves under Linux, in containers, and across databases produces better systems.",
       },
@@ -187,9 +187,9 @@ export const portfolioData: PortfolioData = {
         id: "deployment",
         title: "Deployment & Infrastructure",
         description:
-          "Working with Linux, Docker, and CI/CD pipelines to support reliable build, test, and deployment workflows across environments.",
+          "Working with Linux, Docker, and CI/CD workflows across development and staging environments.",
         iconName: "Cloud",
-        tags: ["Linux", "Docker", "CI/CD", "Bitbucket"],
+        tags: ["Linux", "Docker", "Git", "Bitbucket", "CI/CD"],
       },
     ],
   },
@@ -201,46 +201,54 @@ export const portfolioData: PortfolioData = {
       "A snapshot of tools, systems, and practices I am currently learning and experimenting with outside my established stack.",
     categories: [
       {
-        id: "orchestration",
-        name: "Container Orchestration",
+        id: "kubernetes",
+        name: "Kubernetes",
         description:
-          "Actively learning cluster architecture, container orchestration, and cloud-native workflows.",
+          "Currently learning container orchestration, deployments, services, and core Kubernetes concepts.",
         skills: [
           {
             name: "Kubernetes",
-            category: "orchestration",
-            focus: "Currently learning — Architecture, Pods & Services",
+            category: "kubernetes",
+            focus: "Deployments, Services & Pods",
           },
         ],
       },
       {
-        id: "systems",
-        name: "Systems & Linux",
+        id: "linux-internals",
+        name: "Linux Internals",
         description:
-          "Exploring deeper operating system mechanics, process management, and systems programming.",
+          "Exploring processes, services, system behavior, and deeper Linux administration.",
         skills: [
           {
             name: "Linux Internals",
-            category: "systems",
-            focus: "Kernel basics, processes & namespaces",
+            category: "linux-internals",
+            focus: "Processes, services & system behavior",
           },
         ],
       },
       {
-        id: "devops-workflows",
-        name: "DevOps & Workflows",
+        id: "devops-practices",
+        name: "DevOps Practices",
         description:
-          "Expanding into broader deployment practices, workflow automation, and infrastructure tooling.",
+          "Expanding practical knowledge around deployment, infrastructure, CI/CD, and operational workflows.",
         skills: [
           {
-            name: "Broader DevOps Practices",
-            category: "devops-workflows",
-            focus: "Deployment workflows & infrastructure",
+            name: "DevOps Practices",
+            category: "devops-practices",
+            focus: "Deployment, infrastructure & operations",
           },
+        ],
+      },
+      {
+        id: "airflow",
+        name: "Airflow",
+        description:
+          "Exploring workflow orchestration, scheduling, and automated data workflows.",
+        skills: [
           {
             name: "Airflow",
-            category: "devops-workflows",
-            focus: "Workflow orchestration & data pipelines",
+            category: "airflow",
+            focus: "Workflow orchestration & scheduling",
           },
         ],
       },
