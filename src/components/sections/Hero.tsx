@@ -163,9 +163,11 @@ export function Hero() {
                           >
                             {layer.layer}
                           </span>
-                          <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 border border-zinc-700/50">
-                            {layer.latency}
-                          </span>
+                          {layer.latency && (
+                            <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 border border-zinc-700/50">
+                              {layer.latency}
+                            </span>
+                          )}
                         </div>
                         <div className="flex flex-wrap gap-1.5">
                           {layer.techs.map((tech) => (

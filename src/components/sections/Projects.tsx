@@ -144,7 +144,7 @@ export function Projects() {
                   {featuredProject.architectureHighlights && (
                     <div className="space-y-2 pt-2">
                       <div className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">
-                        Engineering Areas:
+                        ENGINEERING AREAS:
                       </div>
                       <div className="space-y-2">
                         {featuredProject.architectureHighlights.map((arch, i) => (
@@ -161,7 +161,7 @@ export function Projects() {
                 </div>
 
                 <div className="pt-4 mt-6 border-t border-white/[0.04] text-[11px] font-mono text-zinc-500 flex items-center justify-between">
-                  <span>Status: Active production project</span>
+                  <span>Status: Actively maintained</span>
                   <span className="text-emerald-400">●</span>
                 </div>
               </div>
