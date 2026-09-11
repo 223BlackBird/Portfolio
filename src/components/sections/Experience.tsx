@@ -3,7 +3,7 @@ import { portfolioData } from "@/data/portfolio";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Badge } from "../ui/Badge";
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Calendar, MapPin, CheckCircle2 } from "lucide-react";
 
 export function Experience() {
   const { experience } = portfolioData;
@@ -22,7 +22,7 @@ export function Experience() {
           <div className="absolute left-4 md:left-8 top-3 bottom-3 w-[1px] bg-gradient-to-b from-emerald-500/50 via-zinc-800 to-transparent" />
 
           <div className="space-y-12">
-            {experience.items.map((item, index) => (
+            {experience.items.map((item) => (
               <div key={item.id} className="relative flex items-start gap-6 md:gap-10">
                 {/* Timeline node */}
                 <div className="relative z-10 flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-zinc-950 border-2 border-emerald-500/80 shrink-0 mt-1 shadow-lg shadow-emerald-950/50">
@@ -64,23 +64,25 @@ export function Experience() {
                     {item.description}
                   </p>
 
-                  {/* Contributions */}
-                  <div className="space-y-2 pt-2">
-                    <div className="text-xs font-mono text-zinc-500 uppercase tracking-wider">
-                      Key Responsibilities & Impact:
+                  {/* Projects Worked On */}
+                  {item.projects && item.projects.length > 0 && (
+                    <div className="space-y-2 pt-2">
+                      <div className="text-xs font-mono text-zinc-500 uppercase tracking-wider">
+                        Projects Worked On:
+                      </div>
+                      <ul className="space-y-2">
+                        {item.projects.map((project, idx) => (
+                          <li
+                            key={idx}
+                            className="text-xs sm:text-sm text-zinc-300 flex items-start gap-2.5"
+                          >
+                            <CheckCircle2 className="w-4 h-4 text-emerald-500/80 mt-0.5 shrink-0" />
+                            <span className="leading-relaxed font-semibold">{project}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-2">
-                      {item.keyContributions.map((contribution, idx) => (
-                        <li
-                          key={idx}
-                          className="text-xs sm:text-sm text-zinc-300 flex items-start gap-2.5"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500/80 mt-0.5 shrink-0" />
-                          <span className="leading-relaxed">{contribution}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  )}
 
                   {/* Technologies */}
                   <div className="pt-4 border-t border-white/[0.04] flex flex-wrap gap-1.5">
