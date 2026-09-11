@@ -117,6 +117,45 @@ export interface ProjectMockup {
   snippet?: string;
 }
 
+export interface CaseStudySection {
+  title: string;
+  badge?: string;
+  description: string;
+  highlights?: string[];
+  codeSnippet?: string;
+  bulletPoints?: string[];
+}
+
+export interface TruewillCaseStudy {
+  overview: {
+    client: string;
+    domain: string;
+    role: string;
+    period: string;
+    summary: string;
+  };
+  problemContext: string;
+  sections: {
+    backend: CaseStudySection;
+    database: CaseStudySection;
+    automation: CaseStudySection;
+    devops: CaseStudySection;
+  };
+  engineeringDecisions: Array<{
+    area: string;
+    decision: string;
+    rationale: string;
+  }>;
+  outcomes: string[];
+}
+
+export interface StackDomain {
+  domain: string;
+  badge: string;
+  description: string;
+  techs: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -132,6 +171,8 @@ export interface Project {
   isFeatured: boolean;
   keyContributions?: string[];
   mockup?: ProjectMockup;
+  caseStudyUrl?: string;
+  caseStudy?: TruewillCaseStudy;
 }
 
 export interface ExperienceItem {
@@ -143,7 +184,7 @@ export interface ExperienceItem {
   period: string;
   isCurrent?: boolean;
   description: string;
-  keyContributions: string[];
+  projects?: string[];
   technologies: string[];
 }
 
@@ -185,6 +226,7 @@ export interface PortfolioData {
     subtitle: string;
     categories: SkillCategory[];
   };
+  stackDomains: StackDomain[];
   projects: {
     badge: string;
     title: string;

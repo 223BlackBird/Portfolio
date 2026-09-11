@@ -3,7 +3,7 @@ import { portfolioData } from "@/data/portfolio";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Badge } from "../ui/Badge";
-import { ExternalLink, ArrowUpRight, CheckCircle, Terminal } from "lucide-react";
+import { ExternalLink, ArrowUpRight, CheckCircle } from "lucide-react";
 import { GithubIcon } from "../ui/IconHelper";
 
 export function Projects() {
