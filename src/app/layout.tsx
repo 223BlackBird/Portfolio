@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { EffectsProvider } from "@/components/effects/EffectsContext";
+import { EffectsControl } from "@/components/effects/EffectsControl";
+import { RoamingBot } from "@/components/effects/RoamingBot";
+import { AmbientLight } from "@/components/ui/AmbientLight";
+import { WorldObjects } from "@/components/effects/WorldObjects";
 import "./globals.css";
 import { portfolioData } from "@/data/portfolio";
 
@@ -61,8 +66,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
     >
-      <body className="bg-[#090a0f] text-zinc-100 min-h-screen flex flex-col font-sans antialiased selection:bg-emerald-500/30 selection:text-white">
-        {children}
+      <body className="bg-[#090a0f] text-zinc-100 min-h-screen flex flex-col font-sans antialiased selection:bg-emerald-500/30 selection:text-white relative">
+        <EffectsProvider>
+          <AmbientLight />
+          <WorldObjects />
+          {children}
+          <EffectsControl />
+          <RoamingBot />
+        </EffectsProvider>
         <SpeedInsights />
       </body>
     </html>

@@ -35,9 +35,6 @@ export default function WorkPage() {
         <section className="py-16 md:py-24 border-b border-white/[0.06] bg-[#090a0f]">
           <Container>
             <div className="mb-10 space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-emerald-400 font-semibold">
-                Primary Case Study
-              </span>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 Flagship Project
               </h2>
