@@ -95,18 +95,18 @@ const PAGE_OBJECTS: Record<string, ObjectConfig[]> = {
       right: "max(24px, calc(50% - 620px))",
     },
   ],
-  "/terminal": [
+  "/playground": [
     {
-      id: "term-charging",
-      type: "charging-station",
-      top: 340,
-      left: "max(24px, calc(50% - 560px))",
+      id: "playground-terminal",
+      type: "terminal",
+      top: 380,
+      left: "max(24px, calc(50% - 620px))",
     },
     {
-      id: "term-crate",
+      id: "playground-crate",
       type: "crate",
-      top: 680,
-      right: "max(24px, calc(50% - 560px))",
+      top: 860,
+      right: "max(24px, calc(50% - 620px))",
     },
   ],
   "/contact": [

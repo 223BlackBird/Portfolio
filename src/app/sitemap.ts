@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/work/truewill", priority: 0.95, changeFrequency: "monthly" as const },
     { path: "/experience", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/terminal", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/playground", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.85, changeFrequency: "monthly" as const },
   ];
 
