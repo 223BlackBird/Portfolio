@@ -80,10 +80,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terminal"
+                  href="/playground"
                   className="text-zinc-400 hover:text-emerald-400 transition-colors"
                 >
-                  Terminal
+                  Playground
                 </Link>
               </li>
             </ul>
