@@ -107,7 +107,7 @@ export function DeploymentSimulatorExperiment() {
         <div className="flex items-center justify-between gap-3 mb-3">
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
-              EXPERIMENT 04
+              04
             </span>
             <span className="text-zinc-700">/</span>
             <span className="text-[10px] font-mono text-emerald-400/90 uppercase tracking-wider">
