@@ -4,10 +4,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { ApiResponseExperiment } from "@/components/playground/ApiResponseExperiment";
-import { QueryPipelineExperiment } from "@/components/playground/QueryPipelineExperiment";
-import { RetryPolicyExperiment } from "@/components/playground/RetryPolicyExperiment";
+import { ServerLogsExperiment } from "@/components/playground/ServerLogsExperiment";
+import { QueryEditorExperiment } from "@/components/playground/QueryEditorExperiment";
 import { DeploymentSimulatorExperiment } from "@/components/playground/DeploymentSimulatorExperiment";
-import { DebuggingScenariosExperiment } from "@/components/playground/DebuggingScenariosExperiment";
+import { InterviewRoomExperiment } from "@/components/playground/InterviewRoomExperiment";
 
 export const metadata: Metadata = {
   title: "Engineering Playground — Ayush.dev",
@@ -52,21 +52,21 @@ export default function PlaygroundPage() {
         <section className="py-10 sm:py-14 bg-[#090a0f]">
           <Container size="wide">
             <div className="space-y-6">
-              {/* Row 1: API Response & Database Query Pipeline */}
+              {/* Row 1: Live API Explorer & Server Logs */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <ApiResponseExperiment />
-                <QueryPipelineExperiment />
+                <ServerLogsExperiment />
               </div>
 
-              {/* Row 2: Retry Policy & Deployment Pipeline */}
+              {/* Row 2: Query Tool & Deployment Pipeline */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <RetryPolicyExperiment />
+                <QueryEditorExperiment />
                 <DeploymentSimulatorExperiment />
               </div>
 
-              {/* Row 3: Debugging Scenarios (Signature Lab) */}
+              {/* Row 3: Live Interview Room */}
               <div>
-                <DebuggingScenariosExperiment />
+                <InterviewRoomExperiment />
               </div>
             </div>
 
